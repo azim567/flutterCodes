@@ -5,11 +5,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( title: Text("Wallpaper App"),),
+      appBar: AppBar(
+        title: Text("Wallpaper App"),
+      ),
       body: Center(
         child: Container(
           child: Text("Welcome to $days days of flutter| Thecodingshef"),
-          
         ),
       ),
       drawer: Drawer(),

@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:firstapp/pages/home_page.dart';
 import 'package:firstapp/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   var myApp = MyApp();
@@ -15,12 +16,15 @@ class MyApp extends StatelessWidget {
     var details = getDetailsOfPerson(age: 20);
     log(details.toString());
     return MaterialApp(
-      themeMode: ThemeMode.dark,
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
       routes: {
-        "/" : (context) => LoginPage(),
+        "/": (context) => LoginPage(),
         "/home": (context) => HomePage(),
-        "/login" : (context) => LoginPage()
+        "/login": (context) => LoginPage()
       },
     );
   }
